@@ -3,7 +3,10 @@
 
     background: #010202 url(section_type_main.jpg) no-repeat 100% 0;
     background-size: auto 100%;
-    /* TODO: MQ для 100% auto при низком широком вьюпорте */
+}
+
+.page_wide .section_type_main {
+    background-size: 100%;
 }
 
 .section_type_main .link {
@@ -12,17 +15,19 @@
 
 .call-for-action {
     max-width: 1045px;
-    height: 360px;
     margin: auto;
 
     text-align: center;
 }
 
 .call-for-action__title {
-    font-size: 36px;
+    margin-bottom: 42px;
+    /*font-size: 36px;*/
+    font-size: 34px;
 }
 
 .call-for-action__subtitle {
+    margin-bottom: 66px;
     font-size: 20px;
 }
 

@@ -1,13 +1,18 @@
 .button {
-
+    width: 360px;
 }
 
 .button_theme_md {
     border: none;
+    cursor: pointer;
     color: #fff;
     font-size: 24px;
     line-height: 66px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.button_theme_md:hover {
+    box-shadow: none;
 }
 
 .button_action_video {
@@ -15,7 +20,15 @@
     background: linear-gradient(to bottom, #39c 0, #247fac 100%);
 }
 
+.button_action_video:hover {
+    background: #2c8dbe;
+}
+
 .button_action_download {
     background: #6cae11;
     background: linear-gradient(to bottom, #65ad02 0, #579304 100%);
+}
+
+.button_action_download:hover {
+    background: #6cae11;
 }

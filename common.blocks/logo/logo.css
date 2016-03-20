@@ -1,6 +1,22 @@
-/*.logo {
-    display: inline;
-}*/
+.logo {
+    position: relative;
+    z-index: 1;
+
+    max-width: 50%;
+}
+
+.logo:before {
+    position: absolute;
+    left: -130px;
+    top: 13px;
+
+    width: 99px;
+    height: 98px;
+
+    content: "";
+
+    background: url(logo.png);
+}
 
 .logo__main {
     margin-bottom: 12px;

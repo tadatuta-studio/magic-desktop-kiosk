@@ -14,6 +14,7 @@ module.exports = {
             {
                 block: 'section',
                 mods: { type: 'main' },
+                attrs: { id: 'main' },
                 content: [
                     {
                         block: 'header',
@@ -60,6 +61,10 @@ module.exports = {
                                         {
                                             block: 'button',
                                             mods: { theme: 'md', action: 'video', size: 'm' },
+                                            icon: {
+                                                block: 'icon',
+                                                mods: { ico : 'play' }
+                                            },
                                             text: 'Watch video demo'
                                         },
                                         {
@@ -71,16 +76,33 @@ module.exports = {
                                 ]
                             }
                         ]
+                    },
+                    {
+                        block: 'link',
+                        url: '#values',
+                        mix: {
+                            block: 'go',
+                            mods: { dir: 'down' }
+                        }
+                    },
+                    {
+                        block: 'modal',
+                        mods: { theme: 'islands', autoclosable: true, 'has-close': true },
+                        content: {
+                            block: 'video',
+                            url: 'https://www.youtube.com/embed/7pmPO95Y068?autoplay=1&rel=0&showinfo=0'
+                        }
                     }
                 ]
             },
             {
                 block: 'section',
                 mods: { type: 'values' },
+                attrs: { id: 'values' },
                 content: [
                     {
                         block: 'link',
-                        url: '#',
+                        url: '#main',
                         mix: {
                             block: 'go',
                             mods: { dir: 'up' }

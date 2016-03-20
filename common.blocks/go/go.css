@@ -1,6 +1,5 @@
 .go {
     position: absolute;
-    top: 0;
     left: 50%;
 
     overflow: hidden;
@@ -14,15 +13,21 @@
     text-decoration: none;
 }
 
-.go:after {
+.go_dir_up {
+    top: 0;
+}
+
+.go_dir_down {
+    bottom: 0;
+}
+
+.go:before {
     display: block;
     height: 92px;
-    margin-top: -50px;
 
-    content: "^";
+    content: "";
 
     font-size: 35px;
-    line-height: 136px;
     font-weight: bold;
     text-align: center;
     color: #2c4788;
@@ -32,5 +37,25 @@
     box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
 }
 
-.go_dir_up {
+.go_dir_up:before {
+    line-height: 136px;
+    margin-top: -50px;
+}
+
+.go:after {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+
+    width: 25px;
+    height: 20px;
+    margin-left: -13px;
+
+    content: "";
+    background: url(go.png) no-repeat;
+}
+
+.go_dir_up:after {
+    top: 5px;
+    background-position: 0 -20px;
 }

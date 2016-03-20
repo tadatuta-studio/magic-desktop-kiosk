@@ -1,0 +1,26 @@
+.header {
+    position: relative;
+
+    height: 60vh;
+    padding-top: 63px;
+
+    flex-grow: 1;
+}
+
+.header__badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 196px;
+    height: 124px;
+    margin-left: -98px;
+
+    background: url(header__badge.png);
+}
+
+.header__quote {
+    float: right;
+    margin-top: 28px;
+
+    font-size: 30px;
+}

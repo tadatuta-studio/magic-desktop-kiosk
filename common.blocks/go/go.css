@@ -1,0 +1,36 @@
+.go {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    overflow: hidden;
+
+    width: 92px;
+    height: 46px;
+    margin-left: -46px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.go:after {
+    display: block;
+    height: 92px;
+    margin-top: -50px;
+
+    content: "^";
+
+    font-size: 35px;
+    line-height: 136px;
+    font-weight: bold;
+    text-align: center;
+    color: #2c4788;
+
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+}
+
+.go_dir_up {
+}

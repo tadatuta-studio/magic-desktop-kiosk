@@ -1,0 +1,15 @@
+/*.logo {
+    display: inline;
+}*/
+
+.logo__main {
+    margin-bottom: 12px;
+
+    font-size: 58px;
+}
+
+.logo__sub {
+    padding-left: 144px;
+
+    font-size: 26px;
+}

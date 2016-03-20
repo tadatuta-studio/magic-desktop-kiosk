@@ -1,0 +1,31 @@
+.section_type_main {
+    color: #fff;
+
+    background: #010202 url(section_type_main.jpg) no-repeat 100% 0;
+    background-size: auto 100%;
+    /* TODO: MQ для 100% auto при низком широком вьюпорте */
+}
+
+.section_type_main .link {
+    color: #fff;
+}
+
+.call-for-action {
+    max-width: 1045px;
+    height: 360px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.call-for-action__title {
+    font-size: 36px;
+}
+
+.call-for-action__subtitle {
+    font-size: 20px;
+}
+
+.call-for-action__buttons .button {
+    margin: 0 15px;
+}

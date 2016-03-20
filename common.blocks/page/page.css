@@ -1,0 +1,6 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: "wf_SegoeUI", "Segoe UI", "Segoe", "wf_segoe-ui_normal", "Segoe WP", Tahoma, Verdana, Arial, sans-serif;
+}

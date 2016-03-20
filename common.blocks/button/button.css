@@ -1,0 +1,21 @@
+.button {
+
+}
+
+.button_theme_md {
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    line-height: 66px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.button_action_video {
+    background: #2c8dbe;
+    background: linear-gradient(to bottom, #39c 0, #247fac 100%);
+}
+
+.button_action_download {
+    background: #6cae11;
+    background: linear-gradient(to bottom, #65ad02 0, #579304 100%);
+}

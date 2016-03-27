@@ -14,7 +14,7 @@
     height: 124px;
     margin-left: -98px;
 
-    background: url(header__badge.png);
+    background: url(header__badge.png) no-repeat;
 }
 
 .header__quote {

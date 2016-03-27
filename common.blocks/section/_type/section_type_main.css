@@ -5,8 +5,10 @@
     background-size: auto 100%;
 }
 
-.page_wide .section_type_main {
-    background-size: 100%;
+@media screen and (min-aspect-ratio: 194/100) {
+    .section_type_main {
+        background-size: 100%;
+    }
 }
 
 .section_type_main .link {

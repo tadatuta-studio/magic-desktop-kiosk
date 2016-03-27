@@ -4,7 +4,7 @@ block('metrika').replace()(function() {
         content: {
             tag: 'img',
             attrs: {
-                src: 'https://mc.yandex.ru/watch/34277615',
+                src: 'https://mc.yandex.ru/watch/36227130',
                 style: 'position:absolute; left:-9999px;',
                 alt: ''
             }

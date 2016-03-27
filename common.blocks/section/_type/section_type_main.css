@@ -56,6 +56,14 @@
     margin-bottom: 25px;
 }
 
+.section__thanks {
+    text-align: center;
+}
+
+.section__thanks_hidden {
+    display: none;
+}
+
 .section__thanks:before {
     display: block;
 
@@ -70,10 +78,6 @@
     content: "";
 
     background: #fff url(thanks.png) no-repeat 50% 50%;
-}
-
-.section__thanks_hidden {
-    display: none;
 }
 
 .section__thanks-main {

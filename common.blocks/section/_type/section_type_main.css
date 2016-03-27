@@ -24,13 +24,12 @@
 
 .call-for-action__title {
     margin-bottom: 42px;
-    /*font-size: 36px;*/
-    font-size: 34px;
+    font-size: 2.125em;
 }
 
 .call-for-action__subtitle {
     margin-bottom: 66px;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .call-for-action__buttons .button {
@@ -70,7 +69,7 @@
 
     content: "";
 
-    background: #fff url('thanks.png') no-repeat 50% 50%;
+    background: #fff url(thanks.png) no-repeat 50% 50%;
 }
 
 .section__thanks_hidden {
@@ -78,9 +77,9 @@
 }
 
 .section__thanks-main {
-    font-size: 36px;
+    font-size: 2.25em;
 }
 
 .section__thanks-sub {
-    font-size: 20px;
+    font-size: 1.25em;
 }

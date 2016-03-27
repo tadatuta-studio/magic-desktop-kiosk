@@ -17,11 +17,11 @@
 
 .section__values .dl__dt {
     margin-bottom: 8px;
-    font-size: 35px;
+    font-size: 2.1875em;
 }
 
 .section__values .dl__dd {
-    font-size: 20px;
+    font-size: 1.25em;
     margin: 0 0 28px 0;
 }
 

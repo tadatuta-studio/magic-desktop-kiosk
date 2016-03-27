@@ -1,8 +1,6 @@
 .header {
     position: relative;
 
-    /*height: 60vh;*/
-    height: 42vh;
     padding-top: 63px;
 
     flex-grow: 1;

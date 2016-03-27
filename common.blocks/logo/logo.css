@@ -3,6 +3,7 @@
     z-index: 1;
 
     max-width: 50%;
+    margin-left: 70px;
 }
 
 .logo:before {
@@ -28,4 +29,10 @@
     padding-left: 144px;
 
     font-size: 1.625em;
+}
+
+@media (max-width: 1300px) {
+    .logo:before {
+        display: none;
+    }
 }

@@ -1,3 +1,9 @@
 .modal .textarea {
     height: 278px;
 }
+
+@media (max-width: 1300px) {
+    .modal .textarea {
+        height: 170px;
+    }
+}

@@ -11,24 +11,30 @@
     }
 }
 
+.section_type_main .section__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .section_type_main .link {
     color: #fff;
 }
 
 .call-for-action {
     max-width: 1045px;
-    margin: auto;
+    margin: 0 auto 6.75rem;
 
     text-align: center;
 }
 
 .call-for-action__title {
-    margin-bottom: 42px;
+    margin-bottom: 2.625rem;
     font-size: 2.125em;
 }
 
 .call-for-action__subtitle {
-    margin-bottom: 66px;
+    margin-bottom: 4.125rem;
     font-size: 1.25em;
 }
 

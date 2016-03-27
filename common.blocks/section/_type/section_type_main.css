@@ -34,5 +34,53 @@
 }
 
 .call-for-action__buttons .button {
+    width: 360px;
     margin: 0 15px;
+}
+
+.section__video-modal .modal__content {
+    width: 560px;
+    height: 315px;
+}
+
+.section__feedback-form_hidden {
+    display: none;
+}
+
+.section__feedback-form .form__inner {
+    width: 442px;
+    margin: 0 96px;
+}
+
+.section__feedback-form .input,
+.section__feedback-form .textarea {
+    margin-bottom: 25px;
+}
+
+.section__thanks:before {
+    display: block;
+
+    width: 120px;
+    height: 120px;
+    margin: 38px auto;
+
+    border-radius: 50%;
+
+    box-shadow: 0 2px rgba(0, 0, 0, .5);
+
+    content: "";
+
+    background: #fff url('thanks.png') no-repeat 50% 50%;
+}
+
+.section__thanks_hidden {
+    display: none;
+}
+
+.section__thanks-main {
+    font-size: 36px;
+}
+
+.section__thanks-sub {
+    font-size: 20px;
 }

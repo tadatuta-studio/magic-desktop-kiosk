@@ -1,0 +1,20 @@
+.form__title {
+    margin-bottom: 59px;
+    font-size: 36px;
+    color: #343331;
+}
+
+.form__note {
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 42px;
+    color: #343331;
+}
+
+.form__submit {
+    float: right;
+
+    width: 170px;
+    line-height: 42px;
+}

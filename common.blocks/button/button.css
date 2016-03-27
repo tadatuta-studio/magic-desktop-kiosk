@@ -1,14 +1,26 @@
-.button {
-    width: 360px;
+.button_theme_md {
+    background: #868686;
+    background: linear-gradient(to bottom, #a3a3a3 0, #828282 100%);
 }
 
-.button_theme_md {
+.button_theme_md.button_theme_md {
+    display: inline-block;
     border: none;
+    padding: 0;
     cursor: pointer;
     color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    text-decoration: none;
+}
+
+.button_size_m {
+    font-size: 22px;
+    line-height: 42px;
+}
+
+.button_size_l {
     font-size: 24px;
     line-height: 66px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
 .button_theme_md:hover {

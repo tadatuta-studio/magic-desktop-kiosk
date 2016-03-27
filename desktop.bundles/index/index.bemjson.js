@@ -21,8 +21,12 @@ module.exports = {
                         content: [
                             {
                                 block: 'link',
-                                url: '#',
-                                mix: { block: 'header', elem: 'quote' },
+                                mods: { pseudo: true },
+                                mix: [
+                                    { block: 'header', elem: 'quote' },
+                                    { block: 'section', elem: 'feedback' },
+                                    { block: 'goal', js: { target: 'RequestAQuote' } }
+                                ],
                                 content: 'Request a quote'
                             },
                             {
@@ -60,7 +64,11 @@ module.exports = {
                                     [
                                         {
                                             block: 'button',
-                                            mods: { theme: 'md', action: 'video', size: 'm' },
+                                            mods: { theme: 'md', action: 'video', size: 'l' },
+                                            mix: [
+                                                { block: 'section', elem: 'video-button' },
+                                                { block: 'goal', js: { target: 'Watch' } },
+                                            ],
                                             icon: {
                                                 block: 'icon',
                                                 mods: { ico : 'play' }
@@ -69,7 +77,10 @@ module.exports = {
                                         },
                                         {
                                             block: 'button',
-                                            mods: { theme: 'md', action: 'download', size: 'm' },
+                                            mods: { theme: 'md', action: 'download', size: 'l', type: 'link' },
+                                            mix: { block: 'goal', js: { target: 'Download' } },
+                                            // url: 'http://www.magicdesktop.com/get',
+                                            url: 'http://download.magicdesktop.com/MagicDesktopKiosk.exe',
                                             text: 'Get it now!'
                                         }
                                     ]
@@ -80,18 +91,101 @@ module.exports = {
                     {
                         block: 'link',
                         url: '#values',
-                        mix: {
-                            block: 'go',
-                            mods: { dir: 'down' }
+                        mix: [
+                            {
+                                block: 'go',
+                                mods: { dir: 'down' }
+                            },
+                            { block: 'goal', js: { target: 'LearnMore' } }
+                        ]
+                    },
+                    {
+                        block: 'modal',
+                        mods: { theme: 'islands', autoclosable: true, 'has-close': true },
+                        mix: { block: 'section', elem: 'video-modal' },
+                        content: {
+                            block: 'video',
+                            url: 'https://www.youtube.com/embed/7pmPO95Y068?autoplay=1&rel=0&showinfo=0'
                         }
                     },
                     {
                         block: 'modal',
                         mods: { theme: 'islands', autoclosable: true, 'has-close': true },
-                        content: {
-                            block: 'video',
-                            url: 'https://www.youtube.com/embed/7pmPO95Y068?autoplay=1&rel=0&showinfo=0'
-                        }
+                        mix: { block: 'section', elem: 'feedback' },
+                        content: [
+                            {
+                                block: 'form',
+                                // method: 'post',
+                                // action: 'http://www.magicdesktop.com/en-US/Support',
+                                mix: { block: 'section', elem: 'feedback-form' },
+                                content: [
+                                    {
+                                        elem: 'title',
+                                        content: 'Please, fill the form'
+                                    },
+                                    {
+                                        elem: 'inner',
+                                        content: [
+                                            {
+                                                block: 'input',
+                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                name: 'Subject',
+                                                placeholder: 'Subject'
+                                            },
+                                            {
+                                                block: 'textarea',
+                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                name: 'Message',
+                                                placeholder: 'Enter your message here...'
+                                            },
+                                            {
+                                                block: 'input',
+                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                name: 'Name',
+                                                placeholder: 'Your name'
+                                            },
+                                            {
+                                                block: 'input',
+                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                name: 'Organization',
+                                                placeholder: 'Your organization'
+                                            },
+                                            {
+                                                block: 'input',
+                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                name: 'Email',
+                                                placeholder: 'Your email'
+                                            },
+                                            {
+                                                block: 'button',
+                                                mods: { theme: 'md', size: 'm', type: 'submit' },
+                                                mix: { block: 'form', elem: 'submit' },
+                                                text: 'Send'
+                                            },
+                                            {
+                                                elem: 'note',
+                                                content: 'All fields are required'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                block: 'section',
+                                elem: 'thanks',
+                                elemMods: { hidden: true },
+                                content: [
+                                    {
+                                        elem: 'thanks-main',
+                                        content: 'Thanks for your message.'
+                                    },
+                                    {
+                                        elem: 'thanks-sub',
+                                        content: 'Please allow 1-2 business days for a response.'
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },

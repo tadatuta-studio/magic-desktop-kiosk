@@ -1,12 +1,12 @@
-modules.define('section', ['i-bem__dom', 'button', 'modal', 'jquery'],
-    function(provide, BEMDOM, Button, Modal, $) {
+modules.define('section', ['i-bem__dom', 'button', 'modal', 'jquery', 'input', 'textarea'],
+    function(provide, BEMDOM, Button, Modal, $, Input, Textarea) {
 
 provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
     onSetMod: {
         js: {
             inited: function() {
-                this
-                    ._initVideo()
+                this.__base.apply(this, arguments);
+                this._initVideo()
                     ._initFeedback();
             }
         }
@@ -14,9 +14,14 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
     _initFeedback: function() {
         var feedbackLink = this.findBlockOn(this.elem('feedback'), 'link'),
             modal = this.findBlockOn(this.elem('feedback'), 'modal'),
-            form = modal.findBlockInside('form'),
+            form = this._form = modal.findBlockInside('form'),
             feedbackForm = this.elem('feedback-form'),
             thanks = this.elem('thanks');
+
+        this._submitButton = form.findBlockInside({ block: 'button', modName: 'type', modVal: 'submit' });
+
+        Input.on(form.domElem, 'change', this.validateForm, this);
+        Textarea.on(form.domElem, 'change', this.validateForm, this);
 
         feedbackLink.on('click', function() {
             modal.setMod('visible');
@@ -25,7 +30,7 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
         form.on('submit', function(e) {
             e.preventDefault();
 
-            console.log(form.domElem.serializeArray());
+            // console.log(form.domElem.serializeArray());
 
             $.post('http://www.magicdesktop.com/en-US/Support', form.domElem.serializeArray())
                 .done(function() {
@@ -36,6 +41,9 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
                 });
             // method: 'post',
             // action: 'http://www.magicdesktop.com/en-US/Support',
+
+            thanks.width(feedbackForm.width());
+            thanks.height(feedbackForm.height());
 
             this
                 .setMod(feedbackForm, 'hidden')
@@ -54,6 +62,13 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
         }, this);
 
         return this;
+    },
+    validateForm: function() {
+        var isFormFilled = this._form.domElem.serializeArray().every(function(formDataItem) {
+            return formDataItem.value;
+        });
+
+        this._submitButton.setMod('disabled', !isFormFilled);
     },
     _initVideo: function() {
         var modal = this.findBlockOn(this.elem('video-modal'), 'modal'),

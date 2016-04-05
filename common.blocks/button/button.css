@@ -12,6 +12,11 @@
     background: linear-gradient(to bottom, #a3a3a3 0, #828282 100%);
 }
 
+.button_theme_md.button_disabled {
+    opacity: .5;
+    cursor: default;
+}
+
 .button_size_m {
     font-size: 1.375em;
     line-height: 38px;

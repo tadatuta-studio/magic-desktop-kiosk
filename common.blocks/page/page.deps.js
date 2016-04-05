@@ -1,5 +1,6 @@
 ({
     shouldDeps: [
+        'scroll',
         'metrika',
         'analytics'
     ]

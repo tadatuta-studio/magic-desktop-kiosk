@@ -44,8 +44,8 @@
 }
 
 .section__video-modal .modal__content {
-    width: 560px;
-    height: 315px;
+    width: 800px;
+    height: 450px;
 }
 
 .section__feedback-form_hidden {
@@ -63,6 +63,10 @@
 }
 
 .section__thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
 }
 
@@ -70,12 +74,12 @@
     display: none;
 }
 
-.section__thanks:before {
+.section__thanks-inner:before {
     display: block;
 
     width: 120px;
     height: 120px;
-    margin: 38px auto;
+    margin: 0 auto 28px;
 
     border-radius: 50%;
 

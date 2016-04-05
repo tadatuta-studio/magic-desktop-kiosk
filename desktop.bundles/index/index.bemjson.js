@@ -128,37 +128,37 @@ module.exports = {
                                         content: [
                                             {
                                                 block: 'input',
-                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                mods: { theme: 'islands', size: 'xl', width: 'available' },
                                                 name: 'Subject',
                                                 placeholder: 'Subject'
                                             },
                                             {
                                                 block: 'textarea',
-                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                mods: { theme: 'islands', size: 'xl', width: 'available' },
                                                 name: 'Message',
                                                 placeholder: 'Enter your message here...'
                                             },
                                             {
                                                 block: 'input',
-                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                mods: { theme: 'islands', size: 'xl', width: 'available' },
                                                 name: 'Name',
                                                 placeholder: 'Your name'
                                             },
                                             {
                                                 block: 'input',
-                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                mods: { theme: 'islands', size: 'xl', width: 'available' },
                                                 name: 'Organization',
                                                 placeholder: 'Your organization'
                                             },
                                             {
                                                 block: 'input',
-                                                mods: { theme: 'islands', size: 'm', width: 'available' },
+                                                mods: { theme: 'islands', size: 'xl', width: 'available' },
                                                 name: 'Email',
                                                 placeholder: 'Your email'
                                             },
                                             {
                                                 block: 'button',
-                                                mods: { theme: 'md', size: 'm', type: 'submit' },
+                                                mods: { theme: 'md', size: 'm', type: 'submit', disabled: true },
                                                 mix: { block: 'form', elem: 'submit' },
                                                 text: 'Send'
                                             },
@@ -174,16 +174,19 @@ module.exports = {
                                 block: 'section',
                                 elem: 'thanks',
                                 elemMods: { hidden: true },
-                                content: [
-                                    {
-                                        elem: 'thanks-main',
-                                        content: 'Thanks for your message.'
-                                    },
-                                    {
-                                        elem: 'thanks-sub',
-                                        content: 'Please allow 1-2 business days for a response.'
-                                    }
-                                ]
+                                content: {
+                                    elem: 'thanks-inner',
+                                    content: [
+                                        {
+                                            elem: 'thanks-main',
+                                            content: 'Thanks for your message.'
+                                        },
+                                        {
+                                            elem: 'thanks-sub',
+                                            content: 'Please allow 1-2 business days for a response.'
+                                        }
+                                    ]
+                                }
                             }
                         ]
                     }

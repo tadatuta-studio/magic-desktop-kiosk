@@ -10,9 +10,9 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 196px;
-    height: 124px;
-    margin-left: -98px;
+    width: 160px;
+    height: 96px;
+    margin-left: -80px;
 
     background: url(header__badge.png) no-repeat;
 }

@@ -43,9 +43,16 @@
     margin: 0 15px;
 }
 
-.section__video-modal .modal__content {
+.section__video-modal.section__video-modal .modal__content {
     width: 800px;
     height: 450px;
+
+    background: transparent;
+    border: none;
+}
+
+.section__video-modal.section__video-modal .modal__close {
+    color: #fff;
 }
 
 .section__feedback-form_hidden {

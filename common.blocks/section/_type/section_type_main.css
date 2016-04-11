@@ -22,6 +22,7 @@
 }
 
 .call-for-action {
+    width: 100%; /* fixes aligment of flexbox in IE */
     max-width: 1045px;
     margin: 0 auto 6.75rem;
 

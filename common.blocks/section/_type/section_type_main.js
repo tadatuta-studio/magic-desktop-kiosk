@@ -76,17 +76,11 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
         this._submitButton.setMod('disabled', !(isFormFilled && isEmailValid));
     },
     _initVideo: function() {
-        var modal = this.findBlockOn(this.elem('video-modal'), 'modal'),
-            video = modal.findBlockInside('video'),
+        var video = this.findBlockInside('video'),
             videoButton = this.elem('video-button');
 
         Button.on(videoButton, 'click', function() {
-            modal.setMod('visible');
             video.setMod('playing');
-        });
-
-        modal.on({ modName: 'visible', modVal: '' }, function() {
-            video.delMod('playing');
         });
 
         return this;

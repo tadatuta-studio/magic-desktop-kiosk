@@ -1,4 +1,5 @@
-modules.define('page', ['i-bem__dom', 'scroll', 'go'], function(provide, BEMDOM, Scroll, Go) {
+modules.define('page', ['i-bem__dom', 'scroll', 'go', 'video'],
+    function(provide, BEMDOM, Scroll, Go, Video) {
 
 provide(BEMDOM.decl(this.name, {
     onSetMod: {
@@ -18,15 +19,27 @@ provide(BEMDOM.decl(this.name, {
                 this.bindToWin('scroll', this._onScroll);
 
                 Go.on(this.domElem, 'go', function(e, data) {
-                    _this.scrollTo(data.dir);
+                    _this.scrollToDir(data.dir);
                 });
+
+                // block scrolling while video is playing
+                Video.on(this.domElem, { modName: 'playing', modVal: '*' }, function(e, data) {
+                    if (data.modVal) {
+                        this.unbindFromWin('scroll', this._onScroll);
+                        this.bindToWin('scroll', this._disableScroll);
+                        return;
+                    }
+
+                    this.unbindFromWin('scroll', this._disableScroll);
+                    this.bindToWin('scroll', this._onScroll);
+                }, this);
             }
         }
     },
     getScrollY: function() {
         return window.pageYOffset || document.documentElement.scrollTop;
     },
-    scrollTo: function(dir) {
+    scrollToDir: function(dir) {
         var _this = this;
 
         this._scrollY = this.getScrollY();
@@ -54,7 +67,10 @@ provide(BEMDOM.decl(this.name, {
     _onScroll: function() {
         var currentY = this.getScrollY();
 
-        this.scrollTo(currentY - this._scrollY > 0 ? 'down' : 'up');
+        this.scrollToDir(currentY - this._scrollY > 0 ? 'down' : 'up');
+    },
+    _disableScroll: function() {
+        window.scrollTo(0, 0);
     }
 }));
 

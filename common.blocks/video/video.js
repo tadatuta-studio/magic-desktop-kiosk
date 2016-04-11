@@ -12,6 +12,12 @@ provide(BEMDOM.decl(this.name, {
             }
         }
     }
+}, {
+    live: function() {
+        this.liveBindTo('click', function() {
+            this.delMod('playing');
+        });
+    }
 }));
 
 });

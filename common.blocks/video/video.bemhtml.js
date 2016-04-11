@@ -2,9 +2,9 @@ block('video')(
     js()(true),
     content()(function() {
         return [
-            applyNext(),
             {
-                elem: 'button'
+                elem: 'close',
+                content: '×'
             },
             {
                 elem: 'player',

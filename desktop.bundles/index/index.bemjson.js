@@ -8,7 +8,6 @@ module.exports = {
         { elem: 'css', url: 'index.min.css' }
     ],
     scripts: [{ elem: 'js', url: 'index.min.js' }],
-    // mods: { theme: 'islands' },
     content: [
         [
             {
@@ -94,13 +93,8 @@ module.exports = {
                         mix: { block: 'goal', js: { target: 'LearnMore' } }
                     },
                     {
-                        block: 'modal',
-                        mods: { theme: 'islands', autoclosable: true, 'has-close': true },
-                        mix: { block: 'section', elem: 'video-modal' },
-                        content: {
-                            block: 'video',
-                            url: 'https://www.youtube.com/embed/7pmPO95Y068?autoplay=1&rel=0&showinfo=0'
-                        }
+                        block: 'video',
+                        url: 'https://www.youtube.com/embed/7pmPO95Y068?autoplay=1&rel=0&showinfo=0'
                     },
                     {
                         block: 'modal',

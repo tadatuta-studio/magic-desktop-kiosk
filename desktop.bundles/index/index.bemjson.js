@@ -89,15 +89,9 @@ module.exports = {
                         ]
                     },
                     {
-                        block: 'link',
-                        url: '#values',
-                        mix: [
-                            {
-                                block: 'go',
-                                mods: { dir: 'down' }
-                            },
-                            { block: 'goal', js: { target: 'LearnMore' } }
-                        ]
+                        block: 'go',
+                        mods: { dir: 'down' },
+                        mix: { block: 'goal', js: { target: 'LearnMore' } }
                     },
                     {
                         block: 'modal',
@@ -198,12 +192,8 @@ module.exports = {
                 attrs: { id: 'values' },
                 content: [
                     {
-                        block: 'link',
-                        url: '#main',
-                        mix: {
-                            block: 'go',
-                            mods: { dir: 'up' }
-                        }
+                        block: 'go',
+                        mods: { dir: 'up' }
                     },
                     {
                         block: 'heading',

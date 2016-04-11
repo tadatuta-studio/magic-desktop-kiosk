@@ -1,0 +1,1 @@
+block('go').js()(true);

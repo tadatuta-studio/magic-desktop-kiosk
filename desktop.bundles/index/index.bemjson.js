@@ -123,30 +123,35 @@ module.exports = {
                                             {
                                                 block: 'input',
                                                 mods: { theme: 'islands', size: 'xl', width: 'available' },
+                                                maxlength: 100,
                                                 name: 'Subject',
                                                 placeholder: 'Subject'
                                             },
                                             {
                                                 block: 'textarea',
                                                 mods: { theme: 'islands', size: 'xl', width: 'available' },
+                                                maxlength: 5000,
                                                 name: 'Message',
                                                 placeholder: 'Enter your message here...'
                                             },
                                             {
                                                 block: 'input',
                                                 mods: { theme: 'islands', size: 'xl', width: 'available' },
+                                                maxlength: 50,
                                                 name: 'Name',
                                                 placeholder: 'Your name'
                                             },
                                             {
                                                 block: 'input',
                                                 mods: { theme: 'islands', size: 'xl', width: 'available' },
+                                                maxlength: 150,
                                                 name: 'Organization',
                                                 placeholder: 'Your organization'
                                             },
                                             {
                                                 block: 'input',
                                                 mods: { theme: 'islands', size: 'xl', width: 'available' },
+                                                maxlength: 100,
                                                 name: 'Email',
                                                 placeholder: 'Your email'
                                             },
@@ -158,7 +163,11 @@ module.exports = {
                                             },
                                             {
                                                 elem: 'note',
-                                                content: 'All fields are required'
+                                                content: [
+                                                    'All fields are required',
+                                                    { tag: 'br' },
+                                                    'Email must be valid'
+                                                ]
                                             }
                                         ]
                                     }

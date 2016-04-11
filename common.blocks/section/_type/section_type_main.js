@@ -1,5 +1,5 @@
-modules.define('section', ['i-bem__dom', 'button', 'modal', 'jquery', 'input', 'textarea'],
-    function(provide, BEMDOM, Button, Modal, $, Input, Textarea) {
+modules.define('section', ['i-bem__dom', 'button', 'modal', 'jquery', 'input', 'textarea', 'form'],
+    function(provide, BEMDOM, Button, Modal, $, Input, Textarea, Form) {
 
 provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
     onSetMod: {
@@ -64,11 +64,16 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
         return this;
     },
     validateForm: function() {
-        var isFormFilled = this._form.domElem.serializeArray().every(function(formDataItem) {
+        var formDomElem = this._form.domElem;
+
+        var isFormFilled = formDomElem.serializeArray().every(function(formDataItem) {
             return formDataItem.value;
         });
 
-        this._submitButton.setMod('disabled', !isFormFilled);
+        var email = formDomElem[0].Email.value,
+            isEmailValid = Form.validateEmail(email);
+
+        this._submitButton.setMod('disabled', !(isFormFilled && isEmailValid));
     },
     _initVideo: function() {
         var modal = this.findBlockOn(this.elem('video-modal'), 'modal'),

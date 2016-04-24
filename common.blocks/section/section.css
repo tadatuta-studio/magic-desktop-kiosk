@@ -7,3 +7,25 @@
     max-width: 1192px;
     margin: auto;
 }
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: portrait) {
+    .section {
+     height: 536px;
+     min-height: initial;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: landscape) {
+    .section {
+        height: 335px;
+        min-height: initial;
+    }
+}

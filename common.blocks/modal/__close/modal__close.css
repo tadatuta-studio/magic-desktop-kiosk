@@ -12,3 +12,10 @@
     font-weight: bold;
     color: #333;
 }
+
+@media screen and (max-width: 773px) {
+    .modal__close {
+        top: 0;
+        right: 8px;
+    }
+}

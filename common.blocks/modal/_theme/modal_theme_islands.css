@@ -3,3 +3,41 @@
     border: 1px solid #fff;
     background: #f3f1e7;
 }
+
+@media screen and (max-width: 773px) {
+    .modal_theme_islands .modal__content {
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        overflow: auto;
+    }
+
+    .modal_theme_islands .input_theme_islands.input_size_xl {
+        font-size: 1.4em;
+        line-height: 22px;
+    }
+
+    .modal_theme_islands .input_theme_islands.input_theme_islands .input__control,
+    .modal_theme_islands .textarea_theme_islands.textarea_theme_islands.textarea_size_xl {
+        font-size: 16px;
+    }
+
+    .modal {
+        font-size: 12px;
+    }
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: portrait) {
+    .modal_theme_islands .modal__content {
+        padding: 10px;
+    }
+}

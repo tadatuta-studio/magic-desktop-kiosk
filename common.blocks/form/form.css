@@ -32,3 +32,49 @@
 .input_theme_islands.input_theme_islands.input_size_xl .input__control {
     height: 43px;
 }
+
+@media screen and (max-width: 773px) {
+    .form__title {
+        margin: 20px 0 40px;
+        font-size: 1.8em;
+        color: #343331;
+    }
+
+    .form__submit {
+        float: right;
+        width: 158px;
+    }
+
+    .form__note {
+        line-height: 19px;
+    }
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: portrait) {
+    .form__title {
+        margin: 10px 0;
+        font-size: 1.8em;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: landscape) {
+    .form__title {
+        margin: 11px 0;
+    }
+
+    .form__submit {
+        width: 150px;
+    }
+
+    .form__note {
+        line-height: 17px;
+    }
+}

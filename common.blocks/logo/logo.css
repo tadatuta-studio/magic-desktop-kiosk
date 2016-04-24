@@ -4,6 +4,7 @@
 
     max-width: 50%;
     margin-left: 70px;
+    display: inline-block;
 }
 
 .logo:before {
@@ -34,5 +35,68 @@
 @media (max-width: 1300px) {
     .logo:before {
         display: none;
+    }
+}
+
+@media screen and (max-width: 773px) {
+    .logo {
+        margin: 5px auto;
+        max-width: none;
+    }
+
+    .logo__main {
+        margin-bottom: 0;
+        font-size: 3em;
+        white-space: nowrap;
+        text-align: left;
+    }
+
+    .logo__sub {
+        padding: 5px 0 0 0;
+        text-align: right;
+        margin: 0;
+        font-size: 1.8em;
+    }
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: portrait) {
+    .logo {
+        margin: 5px auto;
+        display: block;
+    }
+
+    .logo__main {
+        text-align: right;
+    }
+
+    .logo__sub {
+        padding: 5px 0 0 0;
+        text-align: right;
+        margin: 0;
+        font-size: 1.8em;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: landscape) {
+    .logo {
+        margin: 0;
+    }
+
+    .logo__main {
+        margin-bottom: 8px;
+    }
+
+    .logo__sub {
+        padding: 0;
+        text-align: right;
+        font-size: 1.4em;
     }
 }

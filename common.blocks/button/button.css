@@ -1,3 +1,7 @@
+.button {
+    text-align: center;
+}
+
 .button_theme_md {
     display: inline-block;
     border: none;
@@ -49,4 +53,44 @@
 
 .button_action_download:hover {
     background: #6cae11;
+}
+
+@media screen and (max-width: 773px) {
+    .button_size_l {
+        font-size: 1.6em;
+        line-height: 50px;
+        padding-bottom: 6px;
+    }
+
+    .button_size_m {
+        font-size: 1.6em;
+        line-height: 3em;
+        padding-bottom: 0;
+    }
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: portrait) {
+    .button {
+        font-size: 14px;
+        line-height: 35px;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: landscape) {
+    .button {
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    .call-for-action__buttons .button {
+        width: 49%;
+    }
 }

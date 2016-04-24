@@ -5,3 +5,13 @@
     margin-right: 16px;
     background: url(../../button/button_action_video.png);
 }
+
+@media screen and (max-width: 773px) {
+    .icon_ico_play {
+        width: 27px;
+        height: 27px;
+        background-size: cover;
+        position: relative;
+        top: 3px;
+    }
+}

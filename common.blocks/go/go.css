@@ -59,3 +59,10 @@
     top: 5px;
     background-position: 0 -20px;
 }
+
+/*mobile*/
+@media all and (max-width: 773px) {
+    .go {
+        display: none;
+    }
+}

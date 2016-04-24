@@ -4,7 +4,7 @@ module.exports = {
     favicon: '/favicon.ico',
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' } },
-        { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
+        { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no' } },
         { elem: 'css', url: 'index.min.css' }
     ],
     scripts: [{ elem: 'js', url: 'index.min.js' }],
@@ -19,16 +19,6 @@ module.exports = {
                         block: 'header',
                         content: [
                             {
-                                block: 'link',
-                                mods: { pseudo: true },
-                                mix: [
-                                    { block: 'header', elem: 'quote' },
-                                    { block: 'section', elem: 'feedback' },
-                                    { block: 'goal', js: { target: 'RequestAQuote' } }
-                                ],
-                                content: 'Request a quote'
-                            },
-                            {
                                 block: 'logo',
                                 content: [
                                     {
@@ -40,6 +30,16 @@ module.exports = {
                                         content: 'it’s like windows for kids!'
                                     }
                                 ]
+                            },
+                            {
+                                block: 'link',
+                                mods: { pseudo: true },
+                                mix: [
+                                    { block: 'header', elem: 'quote' },
+                                    { block: 'section', elem: 'feedback' },
+                                    { block: 'goal', js: { target: 'RequestAQuote' } }
+                                ],
+                                content: 'Request a quote'
                             },
                             {
                                 elem: 'badge'
@@ -55,7 +55,16 @@ module.exports = {
                             },
                             {
                                 elem: 'subtitle',
-                                content: 'World leading child desktop solution that develops young minds with expertly tailored content. The safest way to educate and entertain your youngest visitors!'
+                                content: [
+                                    {
+                                        tag: 'p',
+                                        content:'World leading child desktop solution that develops young minds with expertly tailored content.'
+                                    },
+                                    {
+                                        tag: 'p',
+                                        content:'The safest way to educate and entertain your youngest visitors!'
+                                    }
+                                ]
                             },
                             {
                                 elem: 'buttons',

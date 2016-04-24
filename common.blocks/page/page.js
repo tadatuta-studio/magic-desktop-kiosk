@@ -1,5 +1,5 @@
-modules.define('page', ['i-bem__dom', 'scroll', 'go', 'video'],
-    function(provide, BEMDOM, Scroll, Go, Video) {
+modules.define('page', ['i-bem__dom', 'scroll', 'go', 'video', 'modal', 'dom'],
+    function(provide, BEMDOM, Scroll, Go, Video, Modal, dom) {
 
 provide(BEMDOM.decl(this.name, {
     onSetMod: {
@@ -15,8 +15,10 @@ provide(BEMDOM.decl(this.name, {
                 this._currentSectionIdx = this.sectionIds.indexOf(hash);
 
                 this._scrollY = this.getScrollY();
+                this.setOrientationMod();
                 // TODO: тротлинг
                 this.bindToWin('scroll', this._onScroll);
+                this.bindToWin('resize', this.setOrientationMod);
 
                 Go.on(this.domElem, 'go', function(e, data) {
                     _this.scrollToDir(data.dir);
@@ -33,14 +35,24 @@ provide(BEMDOM.decl(this.name, {
                     this.unbindFromWin('scroll', this._disableScroll);
                     this.bindToWin('scroll', this._onScroll);
                 }, this);
+
+                Modal.on(this.domElem, {modName: 'visible', modVal: '*'}, function(e, data) {
+                    this.setMod('hidden', data.modVal);
+                }, this);
             }
         }
+    },
+    setOrientationMod: function() {
+        if (dom.getFocused().tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+        this.setMod('orientation', window.innerHeight > window.innerWidth ? 'portrait' : 'landscape')
     },
     getScrollY: function() {
         return window.pageYOffset || document.documentElement.scrollTop;
     },
     scrollToDir: function(dir) {
         var _this = this;
+
+        if (screen.height <= 768) return;
 
         this._scrollY = this.getScrollY();
 

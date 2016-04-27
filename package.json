@@ -15,7 +15,7 @@
   "devDependencies": {
     "add-bom": "^1.0.0",
     "bem": "^0.10.2",
-    "enb": "^1.2.0",
+    "enb": "^1.3.0",
     "enb-beautify": "0.0.3",
     "enb-bem-techs": "^2.2.1",
     "enb-bemxjst": "^6.4.0",

@@ -2,6 +2,7 @@
     shouldDeps: [
         'scroll',
         'metrika',
-        'analytics'
+        'analytics',
+        'dom'
     ]
 })

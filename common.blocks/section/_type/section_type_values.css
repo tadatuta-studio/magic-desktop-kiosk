@@ -61,3 +61,107 @@
     background-position: 15px 15px;
     background-image: url(dl__dt_type_support.png);
 }
+
+@media screen and (max-width: 773px) {
+    .section__values {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .section__values .dl__dd {
+        font-size: 1.4em;
+        margin: -25px 0 17px 54px;
+    }
+
+    .section__values .dl__dt {
+        margin-bottom: 8px;
+        font-size: 1.8em;
+        overflow: hidden;
+        padding: 2px 0;
+    }
+
+    .section__values .dl__dt:before {
+        width: 40px;
+        height: 40px;
+        margin: 0 15px 0 0;
+    }
+
+    .section__values .dl__dt_type_cost:before {
+        background-position: 7px 3px;
+        background-size: 25px 32px;
+    }
+
+    .section__values .dl__dt_type_content:before {
+        background-position: 9px 8px;
+        background-size: 22px 22px;
+    }
+
+    .section__values .dl__dt_type_safe:before {
+        background-size: 26px 26px;
+        background-position: 7px;
+    }
+
+    .section__values .dl__dt_type_simple:before {
+        background-size: 26px 26px;
+        background-position: 7px;
+    }
+
+    .section__values .dl__dt_type_support:before {
+        background-position: 7px;
+        background-size: 25px 25px;
+    }
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: portrait) {
+    .section__values .dl__dt {
+        font-size: 1.6em;
+    }
+
+    .section__values .dl__dd {
+        font-size: 1.1em;
+        margin: -25px 0 20px 54px;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: landscape) {
+    .section_type_values .section__inner {
+        padding: 30px 0;
+    }
+
+    .section__values {
+        height: 235px;
+        columns: 2;
+    }
+
+    .section__values .dl__dt {
+        font-size: 1.4em;
+    }
+
+    .section__values .dl__dd {
+        font-size: 1em;
+        margin: -25px 0 10px 54px;
+    }
+
+    /*hack for columns*/
+    .section__values .dl__dd:last-child {
+        margin-bottom: 60px;
+    }
+
+    .dl__dt_type_simple + .dl__dd {
+        position: relative;
+        top: -10px;
+    }
+
+    .dl__dt_type_simple {
+        position: relative;
+        top: -10px;
+    }
+}

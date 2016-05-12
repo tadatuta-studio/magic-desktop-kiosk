@@ -23,3 +23,45 @@
 
     font-size: 1.875em;
 }
+
+@media screen and (max-width: 773px) {
+    .header {
+        padding-top: 20px;
+        display: inline-block;
+        flex: none;
+    }
+
+    .header__badge {
+        display: none;
+    }
+
+    .header__quote {
+        font-size: 18px;
+        margin-top: 0;
+        float: none;
+        display: block;
+        text-align: right;
+    }
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: portrait) {
+    .header__quote {
+        font-size: 18px;
+    }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 773px)
+and (orientation: landscape) {
+    .header__quote {
+        float: right;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}

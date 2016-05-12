@@ -12,8 +12,12 @@
     }
 }
 
-@media (max-width: 1040px) {
+@media screen and (max-width: 773px) {
     .page {
-        font-size: 12px;
+        font-size: 10px;
+    }
+
+    .page_hidden > div {
+        display: none;
     }
 }

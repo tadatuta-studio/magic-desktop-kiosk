@@ -53,12 +53,13 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
         modal.on({ modName: 'visible', modVal: '' }, function() {
             var _this = this;
 
+            if (screen.height < 780) return;
+
             setTimeout(function() {
                 _this
                     .delMod(feedbackForm, 'hidden')
                     .setMod(thanks, 'hidden');
             }, 500);
-
         }, this);
 
         return this;

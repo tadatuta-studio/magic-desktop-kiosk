@@ -1,9 +1,9 @@
 module.exports = {
     block: 'page',
-    title: 'Title of the page',
+    title: 'What is Magic Desktop?',
     favicon: '/favicon.ico',
     head: [
-        { elem: 'meta', attrs: { name: 'description', content: '' } },
+        { elem: 'meta', attrs: { name: 'description', content: 'Magic Desktop 9 – The All-In-One Application For Kids!' } },
         { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no' } },
         { elem: 'css', url: 'index.min.css' }
     ],

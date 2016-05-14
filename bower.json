@@ -9,7 +9,11 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "2.5.1",
-    "scroll-js": "^1.0.4"
+    "bem-core": "v3.0.1",
+    "bem-components": "^2.5.1",
+    "scroll-js": "^1.1.1"
+  },
+  "resolutions": {
+    "bem-core": "v3.0.1"
   }
 }

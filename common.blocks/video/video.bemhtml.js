@@ -1,5 +1,9 @@
 block('video')(
-    js()(true),
+    js()(function() {
+        return {
+            videoId: this.ctx.videoId
+        };
+    }),
     content()(function() {
         return [
             {
@@ -8,18 +12,8 @@ block('video')(
             },
             {
                 elem: 'player',
-                url: this.ctx.url
+                attrs: { id: 'player' }
             }
         ];
-    }),
-    elem('player')(
-        tag()('iframe'),
-        attrs()(function() {
-            return {
-                'data-src': this.ctx.url,
-                allowfullscreen: 'allowfullscreen'
-                // TODO: force HD
-            };
-        })
-    )
+    })
 );

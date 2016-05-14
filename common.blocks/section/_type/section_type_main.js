@@ -1,5 +1,5 @@
-modules.define('section', ['i-bem__dom', 'button', 'modal', 'jquery', 'input', 'textarea', 'form'],
-    function(provide, BEMDOM, Button, Modal, $, Input, Textarea, Form) {
+modules.define('section', ['i-bem__dom', 'button', 'modal', 'jquery', 'input', 'textarea', 'form', 'next-tick'],
+    function(provide, BEMDOM, Button, Modal, $, Input, Textarea, Form, nextTick) {
 
 provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
     onSetMod: {
@@ -81,7 +81,9 @@ provide(BEMDOM.decl({ block: this.name, modName: 'type', modVal: 'main' }, {
             videoButton = this.elem('video-button');
 
         Button.on(videoButton, 'click', function() {
-            video.setMod('playing');
+            setTimeout(function() {
+                video.setMod('playing');
+            }, 300);
         });
 
         return this;
